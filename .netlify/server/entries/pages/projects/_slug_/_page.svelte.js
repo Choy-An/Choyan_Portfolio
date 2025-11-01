@@ -11,7 +11,7 @@ import { U as UIcon } from "../../../../chunks/UIcon.js";
 import { C as CardDivider } from "../../../../chunks/CardDivider.js";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".screenshots-scroll.svelte-1sb4s50.svelte-1sb4s50{display:flex;flex-direction:column}.screenshots-scroll.svelte-1sb4s50 img.svelte-1sb4s50{display:block;width:100%;height:auto;margin:0;padding:0;border-radius:0}",
+  code: ".screenshots-scroll.svelte-18pep76{display:flex;flex-direction:column}.screenshot.svelte-18pep76{display:block;width:100%;height:auto;margin:0;padding:0;border-radius:0;object-fit:cover;background-color:#111;filter:blur(10px);transition:filter 0.4s ease-out, opacity 0.4s ease-out;opacity:0}.screenshot[src].svelte-18pep76{filter:blur(0);opacity:1}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -30,7 +30,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )} <p class="font-300" data-svelte-h="svelte-18mwztv">Could not load project data...</p></div>` : `<div class="flex flex-col items-center overflow-x-hidden">${validate_component(Banner, "Banner").$$render($$result, { img: getAssetURL(data.project.logo) }, {}, {
+  )} <p class="font-300" data-svelte-h="svelte-18mwztv">Could not load project data...</p></div>` : `<div class="flex flex-col items-center overflow-x-hidden">${validate_component(Banner, "Banner").$$render($$result, { img: getAssetURL(data.project.banner) }, {}, {
     default: () => {
       return `<div class="col-center p-y-20"><div class="text-0.9em">${validate_component(MainTitle, "MainTitle").$$render($$result, {}, {}, {
         default: () => {
@@ -77,8 +77,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )} <p class="font-300" data-svelte-h="svelte-1ugej71">No description</p></div>`}</div> <div class="w-100% m-t-8">${validate_component(CardDivider, "CardDivider").$$render($$result, {}, {}, {})}</div> ${screenshots.length > 0 ? ` <div class="screenshots-scroll w-full svelte-1sb4s50">${each(screenshots, (item) => {
-    return `<img${add_attribute("src", item.src, 0)}${add_attribute("alt", item.label, 0)} class="svelte-1sb4s50">`;
+  )} <p class="font-300" data-svelte-h="svelte-1ugej71">No description</p></div>`}</div> <div class="w-100% m-t-8">${validate_component(CardDivider, "CardDivider").$$render($$result, {}, {}, {})}</div> ${screenshots.length > 0 ? ` <div class="screenshots-scroll w-full svelte-18pep76">${each(screenshots, (item) => {
+    return `<img${add_attribute("src", item.src, 0)}${add_attribute("alt", item.label || "Project image", 0)} loading="lazy" decoding="async" width="1200" height="800" class="screenshot svelte-18pep76" style="background-color: #111;">`;
   })}</div>` : `<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">${validate_component(UIcon, "UIcon").$$render(
     $$result,
     {
@@ -87,7 +87,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )} <p class="font-300" data-svelte-h="svelte-s36p3y">No screenshots</p></div>`}</div></div>`} </div>`;
+  )} <p class="font-300" data-svelte-h="svelte-s36p3y">No screenshots</p></div>`}  ${data.project.prototype ? `<div class="w-full aspect-video mt-8 mb-4 rounded-xl overflow-hidden shadow-lg"><iframe${add_attribute("src", data.project.prototype, 0)} allowfullscreen class="w-full h-full border-0" loading="lazy"></iframe></div>  <div class="text-center mt-3 mb-8"><a${add_attribute("href", data.project.prototype.replace("embed?embed_host=share&", ""), 0)} target="_blank" class="inline-block text-blue-400 hover:text-blue-300 underline transition">Open in Figma ↗</a></div>` : ``}</div></div>`} </div>`;
 });
 export {
   Page as default

@@ -4,17 +4,17 @@ import { C as Chip } from "../../../chunks/Chip.js";
 import { U as UIcon } from "../../../chunks/UIcon.js";
 import { S as SearchPage } from "../../../chunks/SearchPage.js";
 import { A as Assets, g as getAssetURL } from "../../../chunks/assets.js";
-import { c as computeExactDuration } from "../../../chunks/app.js";
+import { a as computeExactDuration } from "../../../chunks/app.js";
 import { C as CardDivider } from "../../../chunks/CardDivider.js";
 const items = [
   {
     degree: "Aswanth C",
     description: "",
     location: "Thalassery, Kerala",
-    logo: Assets.Aswanth,
+    logo: Assets.AswanthC,
     name: "",
     organization: "Information Designer, Urban Planner",
-    period: { from: new Date(2e3, 11, 11), to: new Date(2025, 11, 11) },
+    period: { from: new Date(2e3, 11, 11), to: new Date() },
     shortDescription: "",
     slug: "dummy-education-item",
     subjects: ["Reading", "Football", "Volleyball", "Creative Coding", "Cooking", "Cycling", "Driving"]
@@ -26,10 +26,10 @@ const items = [
     logo: Assets.NID,
     name: "",
     organization: "National Institute of Design, Bangalore",
-    period: { from: new Date(2024, 6, 1) },
+    period: { from: new Date(2024, 6, 1), to: new Date() },
     shortDescription: "",
     slug: "dummy-education-item-2",
-    subjects: ["Data Visualization", "UI/UX", "Information Architecture", "Human Centric Design"]
+    subjects: ["Data Visualization", "Information Visualization", "UI/UX", "Information Architecture", "Wireframing", "Prototyping", "Service Design", "Human Centric Design"]
   },
   {
     degree: "Bachelor of Planning",
@@ -38,10 +38,10 @@ const items = [
     logo: Assets.SPA,
     name: "",
     organization: "School of Planning and Architecture, Bhopal",
-    period: { from: new Date(2019, 6, 1), to: new Date(2023, 6, 1) },
+    period: { from: new Date(2019, 6, 1), to: new Date(2023, 5, 30) },
     shortDescription: "",
     slug: "dummy-education-item-3",
-    subjects: ["Data Collection and Analysis", "Urban Planning", "Sustainable Design", "3D Modeling"]
+    subjects: ["Data Collection and Analysis", "Urban Planning", "Cartography", "Urban Visualisations", "Sustainable Design", "3D Modeling"]
   },
   {
     degree: "High School",

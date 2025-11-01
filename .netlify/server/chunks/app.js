@@ -137,9 +137,9 @@ const MainTitle = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 const titleSuffix = "Portfolio";
 export {
   MainTitle as M,
-  getTimeDiff as a,
-  countMonths as b,
-  computeExactDuration as c,
+  computeExactDuration as a,
+  getTimeDiff as b,
+  countMonths as c,
   filterItemsByQuery as f,
   getMonthName as g,
   titleSuffix as t,

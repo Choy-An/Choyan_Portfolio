@@ -1,10 +1,11 @@
 import { c as create_ssr_component, v as validate_component, a as add_attribute, b as each, e as escape } from "../../chunks/ssr.js";
 import { g as getAssetURL } from "../../chunks/assets.js";
 import { U as UIcon } from "../../chunks/UIcon.js";
-import { P as Platform } from "../../chunks/types.js";
+import { P as Platform, s as skills, a as links, n as name, l as lastName, d as description, t as title } from "../../chunks/home.js";
 import { M as MainTitle, u as useTitle, t as titleSuffix } from "../../chunks/app.js";
-import { s as skills, a as links, n as name, l as lastName, d as description, t as title } from "../../chunks/home.js";
+import { P as ProjectCard } from "../../chunks/ProjectCard.js";
 import { i as items } from "../../chunks/skills.js";
+import { i as items$1 } from "../../chunks/projects.js";
 import { isBlank } from "@riadh-adrani/utils";
 const Carrousel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { items: items2 = [] } = $$props;
@@ -76,27 +77,37 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.icon(icon);
   return `<svg class="inline-block"${add_attribute("viewBox", viewBox(icon), 0)}${add_attribute("fill", color, 0)}${add_attribute("height", size, 0)}${add_attribute("width", size, 0)}${add_attribute("this", el, 0)}><path${add_attribute("d", icon, 0)}></path></svg>`;
 });
+const _page_svelte_svelte_type_style_lang = "";
+const css = {
+  code: "section.svelte-17fqlhf{scroll-snap-align:start;scroll-snap-stop:always}",
+  map: null
+};
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const isEmail = (email) => {
     const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return !isBlank(email) && reg.test(email);
   };
-  return `${$$result.head += `<!-- HEAD_svelte-1tippc1_START -->${$$result.title = `<title>${escape(useTitle(title, titleSuffix))}</title>`, ""}<!-- HEAD_svelte-1tippc1_END -->`, ""} <div class="col self-center flex-1 md:flex-row md:slef-stretch justify-center lg:justify-between items-center p-y-0px p-x-10px"><div class="md:flex-1 gap-10px">${validate_component(MainTitle, "MainTitle").$$render($$result, { classes: "md:text-left " }, {}, {
+  const featuredProjects = items$1.slice(0, 3);
+  let projectSection;
+  $$result.css.add(css);
+  return `${$$result.head += `<!-- HEAD_svelte-1tippc1_START -->${$$result.title = `<title>${escape(useTitle(title, titleSuffix))}</title>`, ""}<!-- HEAD_svelte-1tippc1_END -->`, ""}  <section class="min-h-screen flex flex-col md:flex-row justify-center lg:justify-between items-center p-10 svelte-17fqlhf"><div class="md:flex-1 gap-10px">${validate_component(MainTitle, "MainTitle").$$render($$result, { classes: "md:text-left" }, {}, {
     default: () => {
       return `${escape(name)} ${escape(lastName)},`;
     }
-  })} <p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight">${escape(description)}</p> <div class="row justify-center md:justify-start p-y-15px p-x-0px gap-2">${each(links, (link) => {
+  })} <p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight">${escape(description)}</p>  <div class="row justify-center md:justify-start py-4 gap-3">${each(links, (link) => {
     return `<a class="decoration-none"${add_attribute("href", `${isEmail(link.link) ? "mailto:" : ""}${link.link}`, 0)} target="_blank" rel="noreferrer">${validate_component(Icon, "Icon").$$render(
       $$result,
       {
         icon: getPlatfromIcon(link.platform),
         color: "var(--accent-text)",
-        size: "20px"
+        size: "22px"
       },
       {},
       {}
     )} </a>`;
-  })}</div></div> ${validate_component(Carrousel, "Carrousel").$$render($$result, { items: skills ?? items }, {}, {})}</div>`;
+  })}</div></div>  ${validate_component(Carrousel, "Carrousel").$$render($$result, { items: skills ?? items }, {}, {})}</section>  <section class="min-h-screen flex flex-col justify-center items-center bg-[var(--background-secondary)] py-16 px-10 transition-all duration-700 ease-out svelte-17fqlhf" style="${"opacity: " + escape(0, true) + "; transform: translateY(" + escape(50, true) + "px);"}"${add_attribute("this", projectSection, 0)}><h2 class="text-2xl font-semibold text-[var(--primary-text)] mb-8 text-center" data-svelte-h="svelte-bkig44">Featured Projects</h2> <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">${each(featuredProjects, (project) => {
+    return `${validate_component(ProjectCard, "ProjectCard").$$render($$result, { project }, {}, {})}`;
+  })}</div> <div class="text-center mt-10" data-svelte-h="svelte-11fmx5f"><a href="/projects" class="text-[var(--accent)] text-base hover:underline">View All Projects →</a></div> </section>`;
 });
 export {
   Page as default

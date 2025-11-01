@@ -1,51 +1,116 @@
 import { A as Assets } from "./assets.js";
 import { g as getSkills } from "./skills.js";
-import { C as ContractType } from "./types.js";
 const items = [
   {
-    slug: "Data Portrait",
-    company: "Self-employed",
-    description: "Creating awesome tools for developers.",
-    contract: ContractType.SelfEmployed,
-    type: "Software Development",
-    location: "Home",
-    period: { from: new Date() },
-    skills: getSkills("ts", "js"),
-    name: "Data Portrait",
-    color: "red",
-    links: [],
-    logo: Assets.Unknown,
-    shortDescription: "Creating awesome tools for developers."
-  },
-  {
-    slug: "software-freelance",
-    company: "Self-employed",
-    description: "Creating awesome applications for customers.",
-    contract: ContractType.Freelance,
-    type: "Software Development",
-    location: "Home",
-    period: { from: new Date() },
-    skills: getSkills("svelte", "ts", "sass", "css", "html", "js"),
+    slug: "data-tribute",
+    company: "National Institute of Design",
+    description: "A data-driven homage translating Ladislav Sutnar’s design principles into a living visual system that celebrates structure, clarity, and modernist rhythm.",
+    shortDescription: "A data-driven homage translating Ladislav Sutnar’s design principles into a living visual system that celebrates structure, clarity, and modernist rhythm.",
+    type: "Data Visualization / Poster Design",
+    location: "Bangalore",
+    period: { from: new Date("2024-02-01"), to: new Date("2024-02-08") },
+    skills: getSkills("illustrator", "photoshop", "figma"),
     name: "Data Tribute",
-    color: "blue",
-    links: [],
-    logo: Assets.Unknown,
-    shortDescription: "Creating awesome applications for customers."
+    color: "red",
+    // 
+    links: [
+      {
+        label: ""
+      }
+    ],
+    logo: Assets.DT,
+    screenshots: [
+      { src: "/images/TP1.webp" },
+      { src: "/images/TP2.webp" },
+      { src: "/images/TP3.webp" },
+      { src: "/images/TP4.webp" },
+      { src: "/images/TP5.webp" },
+      { src: "/images/TP6.webp" },
+      { src: "/images/TP7.webp" },
+      { src: "/images/TP8.webp" },
+      { src: "/images/TP9.webp" },
+      { src: "/images/TP10.webp" },
+      { src: "/images/TP11.webp" },
+      { src: "/images/TP12.webp" },
+      { src: "/images/TP13.webp" },
+      { src: "/images/TP14.webp" },
+      { src: "/images/TP15.webp" },
+      { src: "/images/TP16.webp" },
+      { src: "/images/TP17.webp" },
+      { src: "/images/TP18.webp" }
+    ]
   },
   {
-    slug: "software-freelance-junior",
-    company: "Self-employed",
-    description: "Creating awesome applications for customers.",
-    contract: ContractType.Freelance,
-    type: "Software Development",
-    location: "Home",
-    period: { from: new Date(2022, 0, 1), to: new Date() },
-    skills: getSkills("css", "html", "js"),
-    name: "Design Process",
-    color: "green",
-    links: [],
-    logo: Assets.Unknown,
-    shortDescription: "Creating awesome applications for customers."
+    slug: "data-portrait",
+    company: "National Institute of Design",
+    description: "A Mahjong-inspired data visualization that transforms personal interests and traits into a layered spatial portrait — part game, part identity system.",
+    shortDescription: "A Mahjong-inspired data visualization that transforms personal interests and traits into a layered spatial portrait — part game, part identity system.",
+    type: "Data Visualization / Poster Design",
+    location: "Bangalore",
+    period: { from: new Date("2024-02-09"), to: new Date("2024-02-16") },
+    skills: getSkills("illustrator", "photoshop", "figma"),
+    name: "Data Portrait",
+    color: "yellow",
+    // 
+    links: [
+      {
+        label: ""
+      }
+    ],
+    logo: Assets.DPR,
+    screenshots: [
+      { src: "/images/DPR1.webp" },
+      { src: "/images/DPR2.webp" },
+      { src: "/images/DPR3.webp" },
+      { src: "/images/DPR4.webp" },
+      { src: "/images/DPR5.webp" },
+      { src: "/images/DPR6.webp" },
+      { src: "/images/DPR7.webp" },
+      { src: "/images/DPR8.webp" },
+      { src: "/images/DPR9.webp" },
+      { src: "/images/DPR10.webp" },
+      { src: "/images/DPR11.webp" },
+      { src: "/images/DPR12.webp" },
+      { src: "/images/DPR13.webp" },
+      { src: "/images/DPR14.webp" },
+      { src: "/images/DPR15.webp" },
+      { src: "/images/DPR16.webp" }
+    ]
+  },
+  {
+    slug: "Scrolly-telling",
+    company: "National Institute of Design",
+    description: "A data-driven visual narrative exploring how Manchester City’s rise after its oil-backed takeover blurs the line between money, merit, and modern football.",
+    shortDescription: "A data-driven visual narrative exploring how Manchester City’s rise after its oil-backed takeover blurs the line between money, merit, and modern football.",
+    type: "Data Narrative",
+    location: "Bangalore",
+    period: { from: new Date("2024-02-17"), to: new Date("2024-02-28") },
+    skills: getSkills("illustrator", "photoshop", "figma"),
+    name: "When Oil and Football Mix Well",
+    color: "2F87FF",
+    // 
+    links: [
+      {
+        label: ""
+      }
+    ],
+    logo: Assets.SCR,
+    screenshots: [
+      { src: "/images/SCR 1.webp" },
+      { src: "/images/SCR 2.webp" },
+      { src: "/images/SCR 3.webp" },
+      { src: "/images/SCR 4.webp" },
+      { src: "/images/SCR 5.webp" },
+      { src: "/images/SCR 6.webp" },
+      { src: "/images/SCR 7.webp" },
+      { src: "/images/SCR 8.webp" },
+      { src: "/images/SCR 9.webp" },
+      { src: "/images/SCR 10.webp" },
+      { src: "/images/SCR 11.webp" },
+      { src: "/images/SCR 12.webp" },
+      { src: "/images/SCR 13.webp" },
+      { src: "/images/SCR 14.webp" }
+    ]
   }
 ];
 const title = "Welcome";

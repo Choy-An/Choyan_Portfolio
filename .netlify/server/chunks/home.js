@@ -1,5 +1,14 @@
-import { P as Platform } from "./types.js";
 import { g as getSkills } from "./skills.js";
+var Platform = /* @__PURE__ */ ((Platform2) => {
+  Platform2["GitHub"] = "github";
+  Platform2["StackOverflow"] = "stackoverflow";
+  Platform2["Twitter"] = "twitter";
+  Platform2["Linkedin"] = "linkedin";
+  Platform2["Email"] = "email";
+  Platform2["Facebook"] = "facebook";
+  Platform2["Youtube"] = "youtube";
+  return Platform2;
+})(Platform || {});
 const title = "Home";
 const name = "Aswanth";
 const lastName = "Choyan";
@@ -11,31 +20,16 @@ const links = [
   },
   {
     platform: Platform.Linkedin,
-    link: "https://www.linkedin.com/"
+    link: "https://www.linkedin.com/in/aswanthchoyan"
   },
   {
     platform: Platform.Email,
-    link: "mailto:aswanthchoyan@gmail.com"
-  },
-  {
-    //platform: Platform.Twitter,
-    link: "https://twitter.com/"
-  },
-  {
-    //platform: Platform.,
-    link: "https://www.youtube.com"
-  },
-  {
-    //platform: Platform.Facebook,
-    //link: 'https://www.facebook.com'
-  },
-  {
-    //platform: Platform.StackOverflow,
-    link: "https://stackoverflow.com/"
+    link: "aswanthchoyan@gmail.com"
   }
 ];
 const skills = getSkills("figma", "illustrator", "photoshop", "excel", "html", "css", "js");
 export {
+  Platform as P,
   links as a,
   description as d,
   lastName as l,

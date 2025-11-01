@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component, b as each, e as escape, a as add_attribute } from "../../../chunks/ssr.js";
-import { c as computeExactDuration, g as getMonthName } from "../../../chunks/app.js";
+import { a as computeExactDuration, g as getMonthName } from "../../../chunks/app.js";
 import { C as Card } from "../../../chunks/Card.js";
 import { C as CardLogo } from "../../../chunks/CardLogo.js";
 import { C as CardTitle, a as ChipIcon } from "../../../chunks/ChipIcon.js";
